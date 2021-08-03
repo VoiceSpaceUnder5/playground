@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./styles.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
+import { EllipsisOutlined } from '@ant-design/icons';
 
 function OptionsButton() {
   const dropdownRef = useRef(null);
@@ -12,26 +13,17 @@ function OptionsButton() {
   return (
     <div className="container">
       <div className="menu-container">
-        <button onClick={onClick} className="menu-trigger">
-          <span>User</span>
-          <img
-            src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/df/df7789f313571604c0e4fb82154f7ee93d9989c6.jpg"
-            alt="User avatar"
-          />
-        </button>
+        <EllipsisOutlined onClick={onClick} className="menu-trigger" style = {{transform: 'rotate(90deg)'}}/>
         <nav
           ref={dropdownRef}
           className={`menu ${isActive ? "active" : "inactive"}`}
         >
           <ul>
             <li>
-              <a href="#">Messages</a>
+              <a href="#">설정</a>
             </li>
             <li>
-              <a href="#">Trips</a>
-            </li>
-            <li>
-              <a href="#">Saved</a>
+              <a href="#">문제 해결 및 도움말</a>
             </li>
           </ul>
         </nav>
