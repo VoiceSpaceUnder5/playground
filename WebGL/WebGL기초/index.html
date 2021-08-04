@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>moving_cube</title>
+	<script id="vertex-shader-2d" type="notjs">
+
+		// attribute는 buffer에서 데이터를 받음
+		attribute vec4 a_position;
+
+		// 모든 shader는 main 함수를 가짐
+		void main() {
+
+		  // gl_Position은 vertex shader가 설정을 담당하는 특수 변수
+		  gl_Position = a_position;
+		}
+
+	  </script>
+
+	  <script id="fragment-shader-2d" type="notjs">
+
+		// Fragment shader는 기본 정밀도를 가지고 있지 않으므로 하나를 선택해야 합니다.
+		// mediump은 좋은 기본값으로 "중간 정밀도"를 의미합니다.
+		precision mediump float;
+
+		void main() {
+		  // gl_FragColor는 fragment shader가 설정을 담당하는 특수 변수
+		  gl_FragColor = vec4(1, 0, 0.5, 1); // 붉은 보라색 반환
+		}
+
+	  </script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+<script src="app.js"></script>
+
+</html>
+
+
+
