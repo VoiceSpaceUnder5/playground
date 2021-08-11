@@ -1,0 +1,40 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div,
+footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer {
+  border: 2px solid rgb(44, 44, 255);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0.2rem;
+  bottom: 0;
+  width: 100%;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.footerLeft {
+  background-color: bisque;
+  flex-basis: 30px;
+}
+
+.footerCenter {
+  background-color: coral;
+}
+
+.footerRight {
+  background-color: deeppink;
+}
