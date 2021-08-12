@@ -17,7 +17,7 @@ declare : TS의 모듈 기능
 
 [Js extends와 implements 의 차이](https://juunone.netlify.app/typescript/extends/)
 
-react + TS 프로젝트 생성 
+react + TS 프로젝트 생성
 
 ```
 npx create-react-app [Project name] --template typescrip
@@ -43,7 +43,7 @@ super(props) : js에서 자식 객체의 생성자에서 항상 먼저 호출해
 
 [이 글이 찐인듯](https://sunmon.github.io/vscode-eslint-prettier-setting/)
 
-[다했는데 vscode에서 저장 할 때 린트 안돌아가면?](https://minemanemo.tistory.com/98) 
+[다했는데 vscode에서 저장 할 때 린트 안돌아가면?](https://minemanemo.tistory.com/98)
 
 [타스에서 스테이트 생성자 안쓰고](https://stackoverflow.com/questions/51465921/react-typescript-constructor-state-vs-property)
 
@@ -59,7 +59,7 @@ React의 props, state 개념은 ES6 문법과 JavaScript Immutability 을 빼놓
 
 
 
-21.08.09 
+21.08.09
 
 [리액트의 보일러 플레이트 create-react-app](https://gocoder.tistory.com/2184?category=909967)
 
@@ -126,7 +126,7 @@ node.js와 npm(node package manager) 가 설치되었는지 확인
 
 ```
 node -v
-npm -v 
+npm -v
 ```
 
 CRA(create-react-app) 을 사용하여 리액트 TS 프로젝트 생성
@@ -208,3 +208,5 @@ JSX 내부에서 자바스크립트 변수 사용시 `{}` 로 감싸서
 
 
 [TS에서 어떻게 react Wrapper 사용하는지](https://www.twilio.com/blog/intro-wrappers-typescript-react)
+
+지라 아이템 연동 테스트
