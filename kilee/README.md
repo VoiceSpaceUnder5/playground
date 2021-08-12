@@ -1,8 +1,6 @@
 1. [공식 튜토리얼을 타스로 포팅해서 치기](https://ko.reactjs.org/tutorial/tutorial.html)
 2. [이거 타스로 포팅해서 치기](https://react.vlpt.us/)
-3. 인프라 관리 -> 도커 컴포즈,  CI, 학습.
-
-
+3. 인프라 관리 -> 도커 컴포즈, CI, 학습.
 
 학습 추천
 
@@ -23,13 +21,9 @@ react + TS 프로젝트 생성
 npx create-react-app [Project name] --template typescrip
 ```
 
-
-
 render()는 렌더링할 내용을 경량화한 React 엘리먼트를 반환한다.
 
 JSX?
-
-
 
 React 엘리먼트는 JavaScript 객체
 
@@ -51,13 +45,7 @@ super(props) : js에서 자식 객체의 생성자에서 항상 먼저 호출해
 
 [인터페이스 vs Type 예약어 차이](https://medium.com/@alexsung/typescript-type%EA%B3%BC-interface-%EC%B0%A8%EC%9D%B4-86666e3e90c)
 
-React의 props, state 개념은 ES6 문법과 JavaScript Immutability 을 빼놓고 이해할 수 없다(원문: [리액트 공부  시 참고해야할 5가지](https://geniee.tistory.com/9))
-
-
-
-
-
-
+React의 props, state 개념은 ES6 문법과 JavaScript Immutability 을 빼놓고 이해할 수 없다(원문: [리액트 공부 시 참고해야할 5가지](https://geniee.tistory.com/9))
 
 21.08.09
 
@@ -78,10 +66,10 @@ WebSite는 어떻게 보여지게되는 걸까?
 [footer 항상 하단에 고정](https://gloriajun.github.io/style/2017/12/07/css-footer-fixed.html)
 
 ```css
-.footer{
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 ```
 
@@ -96,29 +84,15 @@ npm은 의존성과 패키지 관리를 위한 패키지 매니저
 
 [npx는 node 패키지를 실행시키는 하나의 도구](https://velog.io/@kimkyeseung/%EB%B2%88%EC%97%AD-%EA%B7%B8%EB%9E%98-npx-npm%EB%A7%90%EA%B3%A0-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%84%A4%EB%AA%85)
 
-
-
 node.js 가 자바스크립트 런타임이라는게 무슨말이지?
 
 런타임?
 
-
-
-
-
 react eslint 설치하기
-
-
-
-
 
 # 리액트 TS 프로젝트 생성 + ESLINT PRETTIER 세팅
 
-
-
 이 글은 create-react-app api를 사용하여 쉽고 빠르게 리액트 프로젝트를 생성하고, 프로젝트에 ESLintd와 Prettier를 세팅하여, 팀이 함께 리액트 프로젝트를 진행할 때 코드컨벤션을 쉽고 빠르게 적용할 수 있게 하기 위해 작성되었습니다.
-
-
 
 ## STEP1 리액트 TS 프로젝트 생성
 
@@ -141,7 +115,7 @@ Vscode에서 ESlint 확장 설치 후 프로젝트 루트 디렉토리에 .eslin
 //.eslintrc.json
 
 {
-	"extends" : "react-app"
+  "extends": "react-app"
 }
 ```
 
@@ -170,13 +144,9 @@ Vscode 에서 cmd+shift+p 로 패털을 열고 setting.json을 열어
 
 vscode를 이용할 떄, prettierrc는 수정했으나 eslint에는 반영되지 않는 경우가 있다. 이런 경우, vscode를 재시작하면 변경된 prettierrc로 잘 적용된다. 참고 링크 (https://github.com/prettier/eslint-plugin-prettier/issues/103)
 
-
-
 참고
 
 [시간을줄이자React세팅](https://velog.io/@jonmad/%EC%8B%9C%EA%B0%84%EC%9D%84-%EC%A4%84%EC%9D%B4%EC%9E%90-React-Vscode-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85)
-
-
 
 리액트 학습
 
@@ -195,18 +165,12 @@ function App() {
 };
 ```
 
-
-
 JSX 내부에서 자바스크립트 변수 사용시 `{}` 로 감싸서
 
 ```react
 <div>{name}</div>
 ```
 
-
-
-
-
 [TS에서 어떻게 react Wrapper 사용하는지](https://www.twilio.com/blog/intro-wrappers-typescript-react)
 
-지라 아이템 연동 테스트
+지라 아이템 연동 테스트2
