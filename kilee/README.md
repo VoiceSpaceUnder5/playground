@@ -57,8 +57,6 @@ React의 props, state 개념은 ES6 문법과 JavaScript Immutability 을 빼놓
 
 
 
-
-
 21.08.09
 
 [리액트의 보일러 플레이트 create-react-app](https://gocoder.tistory.com/2184?category=909967)
@@ -210,3 +208,129 @@ JSX 내부에서 자바스크립트 변수 사용시 `{}` 로 감싸서
 [TS에서 어떻게 react Wrapper 사용하는지](https://www.twilio.com/blog/intro-wrappers-typescript-react)
 
 지라 아이템 연동 테스트
+
+
+
+
+
+# react/ts project! - 공유 원격 레포지토리에 코드 컨벤션 세팅하기!
+
+
+
+기본적인 react 프로젝트 설치가 완료된 후를 기준으로 합니다 :) 
+
+## eslint  설치!
+
+프로젝트 루트 디렉토리 (우리의 경우 front)에서 으로 설치
+
+```
+npm install -d eslint
+eslint --init
+```
+
+
+
+![image-20210817093115781](README.assets/image-20210817093115781.png)
+
+우리는 리액트 + 타스 이므로 아래와 같이 세팅
+
+>- to check syntax and find problems 
+>- js modules
+>- vue, react: react 
+>- typescript : yes
+>- browser
+>- json
+
+package.json의 devDependencies에 아래와 같이 패키지 추가됨.
+
+![image-20210817093419744](README.assets/image-20210817093419744.png)
+
+.eslintrc.json 파일이 추가됨
+
+프리티어도 깔자!
+
+```
+npm install --save-dev --save-exact prettier
+```
+
+
+
+eslint와 프리티어 붙이자!
+
+```
+npm install eslint-plugin-prettier@latest --save-dev // eslint와 prettier를 같이쓰게하는 플러그인
+npm install --save-dev eslint-config-prettier # prettier와 겹치는 eslint 룰 삭제
+npm install --save-dev eslint-plugin-prettier # eslint 기본 포맷 대신 프리티어 룰과 동일한 포매팅을 이용함
+```
+
+
+
+`.eslintrc`에 프리티어 확장팩을 설정한다. 뒤에 오는 설정이 앞을 덮어쓰기때문에 꼭 prettier가 뒤로 와야 한다!
+
+```
+"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+```
+
+
+
+프리티어 설정파일 만들기 
+
+`.prettierrc.json` or js
+
+프리티어 전체 옵션이다.(v1.19.1))  -- 팀원 논의 후 컨벤션 적용 필요
+
+```
+{
+  "arrowParens": "avoid", // 화살표 함수 괄호 사용 방식
+  "bracketSpacing": false, // 객체 리터럴에서 괄호에 공백 삽입 여부 
+  "endOfLine": "auto", // EoF 방식, OS별로 처리 방식이 다름 
+  "htmlWhitespaceSensitivity": "css", // HTML 공백 감도 설정
+  "jsxBracketSameLine": false, // JSX의 마지막 `>`를 다음 줄로 내릴지 여부 
+  "jsxSingleQuote": false, // JSX에 singe 쿼테이션 사용 여부
+  "printWidth": 80, //  줄 바꿈 할 폭 길이
+  "proseWrap": "preserve", // markdown 텍스트의 줄바꿈 방식 (v1.8.2)
+  "quoteProps": "as-needed" // 객체 속성에 쿼테이션 적용 방식
+  "semi": true, // 세미콜론 사용 여부
+  "singleQuote": true, // single 쿼테이션 사용 여부
+  "tabWidth": 2, // 탭 너비 
+  "trailingComma": "all", // 여러 줄을 사용할 때, 후행 콤마 사용 방식
+  "useTabs": false, // 탭 사용 여부
+  "vueIndentScriptAndStyle": true, // Vue 파일의 script와 style 태그의 들여쓰기 여부 (v1.19.0)
+  "parser": '', // 사용할 parser를 지정, 자동으로 지정됨
+  "filepath": '', // parser를 유추할 수 있는 파일을 지정
+  "rangeStart": 0, // 포맷팅을 부분 적용할 파일의 시작 라인 지정
+  "rangeEnd": Infinity, // 포맷팅 부분 적용할 파일의 끝 라인 지정,
+  "requirePragma": false, // 파일 상단에 미리 정의된 주석을 작성하고 Pragma로 포맷팅 사용 여부 지정 (v1.8.0)
+  "insertPragma": false, // 미리 정의된 @format marker의 사용 여부 (v1.8.0)
+  "overrides": [ 
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ], // 특정 파일별로 옵션을 다르게 지정함, ESLint 방식 사용
+}
+```
+
+
+
+![image-20210817100535103](README.assets/image-20210817100535103.png)
+
+### vscode CMD+SHIFT+P (명령 팔레트 열어서 setting.json 검색 후 실행)
+
+![image-20210817100615245](README.assets/image-20210817100615245.png)
+
+### 아래 하이라이트 옵션 추가 또는 변경
+
+- editior.formatOnSave : 저장 시 포매터 실행 여부
+- eslint.run : onSave 저장시 발동!
+- editor.defaultFormatter: 기본 포매터를 우리는 프리티어로 세팅!!
+
+![image-20210817100734987](README.assets/image-20210817100734987.png)
+
+context API  : 리액트 공식문서, useContext, useMemo
+
+context provider -> 전역적인 상태에 
+
+react 상태관리도구, 
